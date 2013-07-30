@@ -1,0 +1,3 @@
+creaturename:Skeleton Test Knight$hitpoints:139$manapoints:153$atk:999$def:016$spl:024$expval:32125$attacklist:slash,fireball
+creaturename:Zombie$hitpoints:149$manapoints:000$atk:014$def:003$spl:001$expva:00010$attacklist:bite
+creaturename:Otherworldly Visitor$hitpoints:440$manapoints:240$atk:033$def:135$spl:590$expval:13130$attacklist:slash,lighting bolt,raze

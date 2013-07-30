@@ -1,0 +1,5 @@
+C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\bin\Debug\Text-Based Game.exe
+C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\bin\Debug\Text-Based Game.pdb
+C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\obj\x86\Debug\Text-Based Game.exe
+C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\obj\x86\Debug\Text-Based Game.pdb

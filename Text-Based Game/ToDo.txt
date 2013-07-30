@@ -1,0 +1,7 @@
+﻿//1. Create the character save/load sheet.
+//2. Test the CharParsers get_Exp_By_Level method and the PlayerCharacter's did_Level_Up method.
+3. Start another project, to create the files for enemies.
+4. Handle attack parsing and inventory parsing
+5. Handle the rest of the CharParser, including the ability to parse the ATK, DEF, and SPC values for different levels.
+6. Make the enemies, char stat, etc. sheets.
+7. Rework parts to deal with a six-slot inventory (at the moment, optional).
