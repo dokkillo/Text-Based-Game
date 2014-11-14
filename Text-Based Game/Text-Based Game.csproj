@@ -54,8 +54,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="EnemyData.txt" />
-    <Content Include="LevelData.txt" />
+    <Content Include="EnemyData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LevelData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -67,7 +68,9 @@ namespace Text_Based_Game
                 saveData[11] = "No inventory items";
             }
 
-            System.IO.File.WriteAllLines(@"C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\SaveData.txt", saveData);
+            var path = Directory.GetCurrentDirectory();
+            string filePath = path + @"\SaveData.txt";
+            System.IO.File.WriteAllLines("filePath", saveData);
 
             //String fileData = "MaxHP:" + mHP "$CurrHP:" + cHP + "$MaxMana:" + mMana + "$CurrMana:" + cMana + "$level
         }
@@ -79,7 +82,9 @@ namespace Text_Based_Game
         /// <param name="player"></param>
         public static void load_Game(PlayerCharacter player)
         {
-            String[] saveData = System.IO.File.ReadAllLines(@"C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\SaveData.txt");
+            var path = Directory.GetCurrentDirectory();
+            string filePath = path + @"\SaveData.txt";
+            String[] saveData = System.IO.File.ReadAllLines(filePath);
             player.load_Character(saveData);
             Program.set_StoryCounter(Convert.ToInt32(saveData[10]));
         }

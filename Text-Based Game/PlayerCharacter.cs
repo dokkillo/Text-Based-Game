@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -38,7 +39,8 @@ namespace Text_Based_Game
         /// <param name="filePath"></param>
         public bool did_Level_Up()
         {
-            String filePath = @"C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\LevelData.txt";
+            var path = Directory.GetCurrentDirectory();
+            string filePath = path + @"\LevelData.txt";           
             int exp = CharParser.get_Exp_By_Level(filePath, this.level);
             return this.experience >= exp;
         }

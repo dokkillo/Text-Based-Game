@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -51,7 +52,9 @@ namespace Text_Based_Game
         /// <returns></returns>
         public static String get_Random_Enemy()
         {
-            String[] enemyList = System.IO.File.ReadAllLines(@"C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\EnemyData.txt");
+            var path = Directory.GetCurrentDirectory();
+            string filePath = path + @"\EnemyData.txt";
+            String[] enemyList = System.IO.File.ReadAllLines(filePath);
 
             Random enemyPick = new Random();
             return enemyList[enemyPick.Next(enemyList.Length)];
@@ -66,7 +69,9 @@ namespace Text_Based_Game
         /// <returns></returns>
         public static String get_Bounded_Enemy(int lowerBound, int upperBound)
         {
-            String[] enemyList = System.IO.File.ReadAllLines(@"C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\EnemyData.txt");
+            var path = Directory.GetCurrentDirectory();
+            string filePath = path + @"\EnemyData.txt";
+            String[] enemyList = System.IO.File.ReadAllLines(filePath);
 
             Random enemyPick = new Random();
             return enemyList[enemyPick.Next(lowerBound, upperBound)];
@@ -80,7 +85,9 @@ namespace Text_Based_Game
         /// <returns></returns>
         public static String get_Particular_Enemy(int enemyVal)
         {
-            String[] enemyList = System.IO.File.ReadAllLines(@"C:\Users\Jack\Desktop\Text-Based Game\Text-Based Game\EnemyData.txt");
+            var path = Directory.GetCurrentDirectory();
+            string filePath = path + @"\EnemyData.txt";
+            String[] enemyList = System.IO.File.ReadAllLines(filePath);
 
             return enemyList[enemyVal];
         }
