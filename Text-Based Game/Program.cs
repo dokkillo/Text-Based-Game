@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Text_Based_Game
 {
@@ -12,12 +13,22 @@ namespace Text_Based_Game
         static void Main(string[] args)
         {
             //the string that will hold all user commands in our adventure game
-            String command = "";
+            String command = string.Empty;
 
             PlayerCharacter player = new PlayerCharacter();
 
-            Console.WriteLine("Welcome to the Unnamed Game.  Please enter a character name.");
-            command = Console.ReadLine();
+            Console.WriteLine("Welcome to the Unnamed Game.");
+
+            do
+            {
+                Console.WriteLine("Please enter a character name.");
+                command = Console.ReadLine();
+
+            } while (!(Regex.IsMatch(command, @"^[a-zA-Z]+$")));
+            
+           
+            
+
             player.set_Name(command);
 
             CombatHandler.start_Combat(player, 0, 0, 0);
