@@ -9,6 +9,7 @@ namespace Text_Based_Game
     //Class that is in charge of saving an loading the charData and Place in the story.
     static class DataHandler
     {
+
         /// <summary>
         /// Saves the game.
         /// </summary>
